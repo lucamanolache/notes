@@ -1,0 +1,112 @@
+\lecture{1}{Jan 16}{Propositional Logic}
+
+\section{Propositions}
+\begin{definition}[Propositions]
+  Statements that are true or false.
+\end{definition}
+
+Some example propositions are $\sqrt{2}$ is irrational, $2+2=4$, and $2+2=3$.
+Some non examples are $4+5$ and $x+x$.
+\section{Propositional Forms}
+Propositions can be put together to make another proposition. Some examples of
+this are conjunction ($P \land Q$), disjunction ($P \lor Q$), and negation ($\lnot P$).
+
+\begin{example}
+  Sample propositional forms:
+\begin{enumerate}
+  \item $\lnot (2+2=4)$ is false
+  \item $(2+2=3)\land (2+2=4)$ is false
+\end{enumerate}
+\end{example}
+
+\section{Implication}
+\begin{definition}[Implication]
+  $P \implies Q$ can be read as "If $P$, then $Q$."
+
+  Implications are only false if $P$ is true and $Q$ is false. When $P$ is false,
+  the implication will be true, however this is a meaningless statement.
+  \begin{table}[htpb]
+    \centering
+    \caption{Truth table for $P \implies Q$}
+    \label{tab:label}
+    \begin{tabular}{|c|c|c|}
+      $P$ & $Q$ & $P \implies Q$ \\
+      T & T & T \\
+      T & F & F \\
+      F & T & T \\
+      F & F & T
+    \end{tabular}
+  \end{table}
+\end{definition}
+
+\begin{example}
+  If you stand in the rain, then you'll get wet.
+
+  $P=$ "you stand in the rain"
+
+  $Q=$ "you get wet"
+
+  $P \implies Q$
+\end{example}
+
+\begin{note}
+  If $P \implies Q$, that does not say anything about the opposite of $Q \implies P$.
+\end{note}
+
+\begin{definition}[Contrapositive]
+The contrapositive of $P \implies Q$ is $\lnot Q \implies \lnot P$.
+They are logically equivelent to the implication.
+\end{definition}
+
+\begin{definition}[Converse]
+The converse of $P \implies Q$ is $Q \implies P$.
+They are NOT logically equivelent to the implication.
+\end{definition}
+
+\begin{definition}[If and only if]
+  If $P\implies Q \land Q \implies P$, then P if and only if (iff) Q or $P \iff Q$.
+\end{definition}
+
+\section{Truth Tables}
+Truth tables can simplify doing calculations with propositions.
+
+Truth tables are also able to be used to prove logical equivalence.
+If two statements have the same truth tables, they are logically equivelent.
+
+\section{Quantifiers}
+None of the below are propositions as they have a free variable.
+\begin{itemize}
+  \item $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$
+  \item $x > 2$
+  \item $n$ is even and the sum of two primes
+\end{itemize}
+These are all called predicates.
+They are similar to a function which returns true or false.
+
+To turn them into a predicate we need a quantifier.
+
+\begin{definition}[Universe]
+  A universe is the type of a variable. Some examples are:
+  \begin{itemize}
+    \item $N = \{0, 1, 2, \ldots\}$
+    \item $N^+ = \{1, 2, 3, \ldots\}$
+  \end{itemize}
+\end{definition}
+
+\begin{definition}[There Exists]
+  $(\exists x \in S)(P(x))$ means $P(x)$ is true for some $x$ in $S$.
+
+  Example: $(\exists x \in N) (x = x^2)$
+  True because $0\dot 0 = 0$ and is equivelent to $(0=0) \land (1=1) \land(2=4)\land\ldots$.
+\end{definition}
+
+\begin{definition}[For all]
+  $(\forall x \in S)(P(x))$ means $P(x)$ is true for all $x$ in $S$.
+
+  Example: $(\forall x \in N) (x+1>x)$
+  True because adding one to a number will always be larger.
+\end{definition}
+
+\begin{note}
+  Quantifiers are not communitive.
+\end{note}

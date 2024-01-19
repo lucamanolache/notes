@@ -1,1 +1,29 @@
-lec 2 stuff maht math 
+\lecture{2}{Jan 18}{Proofs}
+
+\section{Background and Notation}
+\begin{definition}[Integers]
+  Integers are closed under addition.
+
+  \[
+    a,b \in \mathbb{Z} \implies a + b \in \mathbb{Z}
+  \]
+\end{definition}
+\begin{definition}[Divisable]
+  $a|b$ is read as "$a$ divides $b$".
+
+  Formally, $a|b \iff \exists q\in\mathbb{Z} \text{ where } b=aq$.
+\end{definition}
+\section{Direct Proof}
+To prove $P \implies Q$ you assume $P$ is true and use that to prove $Q$.
+\section{Proof by Contraposition}
+Remember \ref{contra}, $(P \implies Q) \equiv (\lnot Q \implies \lnot P)$.
+Therefore, if we assume $\lnot Q$ and can prove that it implies $\lnot P$, then
+we have proved the original goal of $P \implies Q$.
+\section{Proof by Contradiction}
+Show that if we assume $\lnot P$, then we use forward reasoning (direct proof)
+to show $\lnot P \implies R$ and to show $\lnot P \implies \lnot R$. This is
+often found when trying to show a simple property should always not hold.
+\section{Proof by Cases}
+Prove all possible cases for something are true, therefore the thing you are
+proving must be true.
+

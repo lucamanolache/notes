@@ -25,6 +25,12 @@ this are conjunction ($P \land Q$), disjunction ($P \lor Q$), and negation ($\ln
 
   Implications are only false if $P$ is true and $Q$ is false. When $P$ is false,
   the implication will be true, however this is a meaningless statement.
+  
+  Additionally, an implication is equivelent to
+
+  \begin{equation}
+    P \implies Q \equiv \lnot P \lor Q
+  \end{equation}
   \begin{table}[htpb]
     \centering
     \caption{Truth table for $P \implies Q$}
@@ -54,6 +60,7 @@ this are conjunction ($P \land Q$), disjunction ($P \lor Q$), and negation ($\ln
 \end{note}
 
 \begin{definition}[Contrapositive]
+  \label{contra}
 The contrapositive of $P \implies Q$ is $\lnot Q \implies \lnot P$.
 They are logically equivelent to the implication.
 \end{definition}
@@ -97,7 +104,7 @@ To turn them into a predicate we need a quantifier.
   $(\exists x \in S)(P(x))$ means $P(x)$ is true for some $x$ in $S$.
 
   Example: $(\exists x \in N) (x = x^2)$
-  True because $0\dot 0 = 0$ and is equivelent to $(0=0) \land (1=1) \land(2=4)\land\ldots$.
+  True because $0\times 0 = 0$ and is equivelent to $(0=0) \land (1=1) \land(2=4)\land\ldots$.
 \end{definition}
 
 \begin{definition}[For all]
@@ -110,3 +117,15 @@ To turn them into a predicate we need a quantifier.
 \begin{note}
   Quantifiers are not communitive.
 \end{note}
+
+\section{DeMorgan's Law for Quantifiers}
+
+When negating a quantifier, you negate the inside and flip the quantifier.
+This means
+\begin{equation}
+  \lnot (\forall x \in S)(P(x)) \equiv (\exists x \in S)(\lnot P(x))
+\end{equation}
+and
+\begin{equation}
+  \lnot (\exists x \in S)(P(x)) \equiv (\forall x \in S)(\lnot P(x))
+\end{equation}

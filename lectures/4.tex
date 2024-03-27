@@ -1,0 +1,40 @@
+\lecture{5}{Jan 30}{Stable Matching}
+
+\section{Propose and Reject}
+\begin{itemize}
+  \item Job proposes to its favorite candidate
+  \item Candidate holds favorite job on a string and rejects all others
+  \item If no jobs are rejected, algorithm halts
+\end{itemize}
+
+\section{Properties}
+Stable matching gets better every day for candidates
+
+\begin{lemma}[Improvement Lemma]
+  If on day $t$ a candidate $c$ has a job $j$ on a string, any job, $j'$ on
+  candidate $c$'s string for any day $t'>t$ is at least as good as $j$.
+\end{lemma}
+
+\begin{proof}
+  $P(k)$ - "Job on $c$'s string is at least as good as $j$ on day $t+k$"
+  By induction, base case: $P(0)$ - true, candidate has $j$ on string.
+  Assume $P(k)$. Let $j'$ be job on string on day $t+k$.
+  On day $t + k + 1$, job $j'$ still on string. Candidate $c$ can choose $j'$
+  or do with a better job $j''$. That is $j' \ge j$ by inductive hypothesis.
+\end{proof}
+
+\begin{lemma}
+  There is no rogue couple for the matching formed by stable matching algorithm.
+\end{lemma}
+
+\begin{definition}[$x$-optimal matching]
+  x's partner is its best partner in any stable pairing.
+\end{definition}
+
+\begin{definition}[$x$-pessimal matching]
+  x's partner is its worst partner in any stable pairing.
+\end{definition}
+
+\begin{definition}[job-optimal matching]
+  It is $x$ optimal for all jobs.
+\end{definition}

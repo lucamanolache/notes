@@ -1,0 +1,48 @@
+\lecture{1}{Jan 23}{Induction}
+
+\section{Induction}
+
+Induction is used to prove statements of the form:
+\begin{equation*}
+  (\forall k \in \mathbb{N})(P(k))
+\end{equation*}
+
+The basic form for mathematical induction is:
+\begin{itemize}
+  \item Prove $P(0)$ (the base case)
+  \item Prove $P(k) \implies P(k+1)$
+  \begin{itemize}
+    \item Assume $P(k)$ (induction hypothesis)
+    \item Prove $P(k+1)$ (induction step)
+  \end{itemize}
+\end{itemize}
+
+\begin{note}
+  We get to use $P(k)$ to prove $P(k+1)$. We only prove local things for $k$ and
+  $k+1$.
+\end{note}
+
+\section{Two Color Theorem}
+
+\begin{thm}[Four color theorem]
+  Any map in a plane can be colored using four-colors in such a way that
+  regions sharing a common boundary (other than a single point) do not share
+  the same color
+\end{thm}
+
+This theorem is way too hard to prove, so instead we focus on a simplified
+theorem called the two color theorem.
+
+\begin{thm}[Two color theorem]
+  Any map formed by dividing the plane into regions by drawing straight lines
+  can be properly colored with two colors.
+\end{thm}
+
+
+\begin{proof}
+  Start with one line dividing the plane. This can be clearly divided in two
+  colors.
+
+  Add a line. Each added line will get the previous one and then fixed
+  conflicts by switching on one side.
+\end{proof}
